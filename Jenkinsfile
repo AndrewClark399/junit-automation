@@ -3,12 +3,6 @@ pipeline {
     agent any
     stages {
 
-        stage('Checkout Codebase'){
-            steps{
-                cleanWs()
-                checkout scm: [$class: 'GitSCM', branches: [[name: '*/main']]]
-            }
-        }
 
         stage('Build'){
             steps{
